@@ -1,0 +1,27 @@
+<p>view-product works!</p>
+
+
+<div class="container-product">
+    <div class="container-img">
+        <img class="img-product" src='{{ product.image }}'>
+    </div>
+
+    <div class="container">
+        <div class="info-product">
+            <h3 class="title"> {{ product.title }} </h3>
+            <div class="description">
+                <p> {{ product.description }} </p>
+                <p> Category: {{ product.category }} </p>
+                <p> Stock: {{ product.rating.count }} </p>
+                <p> Populary: {{ product.rating.rate }} </p>
+            </div>
+            <div>            
+                <h3 class="price-product"> $ {{ product.price }} </h3>
+            </div>
+        </div>
+        <div class="options">
+            <button id="buy-button" type="submit">Buy</button>
+            <button class="button"type="submit">Add to cart</button>
+        </div>
+    </div>
+</div>

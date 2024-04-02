@@ -1,0 +1,144 @@
+body{
+    cursor: url('https://cdn-icons-png.flaticon.com/512/3771/3771695.png'), auto;
+}
+
+.list-products{
+    max-width: 1400px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    max-width: 60vw;
+    margin: 0 auto;
+    padding: 20px 20px;
+    
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+}
+
+.container-product{
+    width: calc(1);
+    width: 20vw;
+    max-width: 30vw;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 20px 20px;
+    cursor: pointer;
+    /*
+    background: yellow;
+    */
+    height: 50vh;
+
+    
+
+
+
+}
+
+.product{
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    margin: 20px auto;
+
+    /*
+    background: red;
+    */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-img{
+    width: 90%;
+    padding: 10px 10px;
+    margin: 0 auto;
+    /*
+    background: rgb(37, 168, 37);
+    */
+
+    box-sizing: content-box;
+    height: 50%;
+    border: 2px solid rgb(15, 56, 97);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-product{
+    border-radius: 15px;
+    box-sizing: content-box;
+    width: 90%;
+    height: 35%;
+    max-height: 45%;
+
+    background: #c7c2c2; 
+    padding: 10px 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/*
+.list-products img {
+    
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+*/
+
+
+.img-product{
+    /*
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin: 5px auto;
+    */
+    box-sizing: content-box;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+    
+}
+
+.description{
+    
+    
+}
+
+textarea{
+    display: block;
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.price-product{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    width: 80%;
+    margin: 20px 20px;
+    /*
+    background: red;
+    */
+    position: sticky;
+    bottom: 0;
+}
