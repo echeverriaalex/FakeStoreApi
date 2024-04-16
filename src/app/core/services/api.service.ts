@@ -19,5 +19,13 @@ export class ApiService {
   getProduct(id: number): Observable<Product>{
     return this.http.get<Product>(`${this.url}/products/${id}`)
   }
+
+  getAllCategories(): Observable<String[]>{
+    return this.http.get<string[]>(`${this.url}/products/categories`)
+  }
+
+  getProductsByCategory(category: string): Observable<any>{
+    return this.http.get<any>(`${this.url}/products/category/${category}`)
+  }
   
 }

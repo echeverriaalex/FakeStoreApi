@@ -32,4 +32,16 @@ export class ProductsFromApiService {
       })
     })
   }
+
+  getProductsCategory(category: string){
+    return new Promise<any>((resolve, reject)=>{
+      this.api.getProductsByCategory(category).subscribe({
+        next: (productList) => resolve(productList),
+        error: (error) => {
+          console.log("Error primse");
+          reject(error)
+        }
+      })
+    })
+  }
 }

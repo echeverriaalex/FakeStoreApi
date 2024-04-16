@@ -1,0 +1,26 @@
+
+.main{
+    background: lightblue;
+}
+
+.head{
+    background: lightseagreen;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    font-family: 'Arial Narrow Bold';
+    text-decoration: overline;
+}
+
+.logo{
+   
+    border-radius: 20px 40px 100px 140px;
+    width: 150px;
+   
+    box-sizing: border-box;
+    margin: 20px 20px;
+}

@@ -15,10 +15,18 @@ export class ListComponent implements OnInit{
 
   constructor(private productService: ProductsFromApiService, 
               private route: ActivatedRoute,
-              private router: Router){}
+              private router: Router,){}
 
   ngOnInit(): void {
-    this.listProducts()
+
+    let category = this.route.snapshot.paramMap.get('category');
+
+    if(category){
+      this.listProductsByCategory(category);
+    }
+    else{
+      this.listProducts()
+    }
   }
 
   changeType(){
@@ -31,24 +39,19 @@ export class ListComponent implements OnInit{
     console.log('type now of pass --> ' + pass?.getAttribute('type'));
   }
 
-
   listProducts(){
-    
-    console.log("listando productos");
-    /*
-    this.api.getAllProducts()
-    .subscribe({
-
-      next: (list) => {
-        console.log(list)        
-      },
-      error: (error) => {
-        console.log("Error primse" + error)
-      }
-    })
-
-    */
     this.productService.getProductsList()
+      .then((list) => {
+        //console.log(list);        
+        this.productsList = list
+      })
+      .catch((err)=>{
+        console.log("error get list products" + err);
+      })
+  }
+
+  listProductsByCategory(category: string){
+    this.productService.getProductsCategory(category)
       .then((list) => {
         //console.log(list);        
         this.productsList = list
@@ -62,4 +65,25 @@ export class ListComponent implements OnInit{
   viewProduct(idProduct: number){    
     this.router.navigate(['/products/product', idProduct]);
   }
+
+
+
+  /*
+
+    ngOnInit(): void {
+    let idProduct = Number(this.route.snapshot.paramMap.get('id'));
+    this.viewProduct(idProduct);
+  }
+
+  viewProduct(id: number){
+    this.productService.getOneProduct(id)
+      .then((productApi) => {     
+        this.product = productApi
+      })
+      .catch((error) =>{
+        console.log(`Dont exists product with id ${id}` + error);
+      })
+  }
+
+  */
 }

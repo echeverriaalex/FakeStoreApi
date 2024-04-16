@@ -1,28 +1,39 @@
 <p>list works!</p>
 
-<input type="password" placeholder="enter pass" id="pass">
-<button type="button" (click)="changeType()" >Mostrar pass</button>
+<!-- 
+   <input type="password" placeholder="enter pass" id="pass">
+<button type="button" (click)="changeType()" >Mostrar pass</button> 
+-->
 
-<div class="list-products">
-    <div class="container-product" *ngFor="let product of productsList" (click)="viewProduct(product.id)">
-        <div class="product">
-            <div class="container-img">
-                <img class="img-product" src="{{ product.image }}">
-            </div>
-            <div class="info-product">
-                <h3> {{ product.title }} </h3>        
-                <div>
-                    <!-- 
-                    <div class="description">
-                        <textarea disabled> {{ product.description }} </textarea>  
-                    </div>
-                    <p> Category: {{ product.category }} </p>
-                    <p> Stock: {{ product.rating.count }} </p>
-                    <p> Populary: {{ product.rating.rate }} </p>
-                    -->
-                    <h3 class="price-product"> $ {{ product.price }} </h3>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container-categories">
+    <app-list-categories> </app-list-categories>
 </div>
+
+
+    
+
+    <div class="list-products">
+        <a *ngFor="let product of productsList" [routerLink]="['/products/product/' + product.id]"> 
+            <div class="container-product"  (click)="viewProduct(product.id)">           
+                <div class="product">
+                    <div class="container-img">
+                        <img class="img-product" src="{{ product.image }}">
+                    </div>
+                    <div class="info-product">
+                        <h3> {{ product.title }} </h3>     
+                        <div>
+                            <!-- 
+                            <div class="description">
+                                <textarea disabled> {{ product.description }} </textarea>  
+                            </div>
+                            <p> Category: {{ product.category }} </p>
+                            <p> Stock: {{ product.rating.count }} </p>
+                            <p> Populary: {{ product.rating.rate }} </p>
+                            -->
+                            <h3 class="price-product"> $ {{ product.price }} </h3>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </a>
+    </div>

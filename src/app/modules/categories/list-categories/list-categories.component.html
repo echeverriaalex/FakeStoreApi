@@ -1,0 +1,24 @@
+<div class="container">
+    <div>
+        <h2>Categoria</h2>
+
+        <!--
+        <select class="select-category">
+            <optgroup>
+                <option  *ngFor="let category of this.categoriesList" (click)="mostrar(category)"> {{ category }} </option>
+            </optgroup>        
+        </select>
+        -->
+
+        <div class="container-list">
+            <ul class="list-categories">
+                <li class="category" *ngFor="let category of this.categoriesList">
+                    <div class="category">
+                        <input type="checkbox" id="{{ category }}"  value="{{ category }}" (click)="listProductsOfcategory(category)">
+                        <label for="{{ category }}"> {{ category }} </label>                        
+                    </div>  
+                </li>
+            </ul>            
+        </div>
+    </div>
+</div>

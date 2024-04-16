@@ -7,7 +7,8 @@ import { LandingPageComponent } from '../landing-page/landing-page.component';
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'list', component: ListComponent},
-  {path: 'product/:id', component: ViewProductComponent}
+  {path: 'product/:id', component: ViewProductComponent},
+  {path: 'products/:category', component: ListComponent}
 ];
 
 @NgModule({

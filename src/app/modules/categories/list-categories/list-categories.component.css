@@ -1,0 +1,33 @@
+.container{
+
+    background: grey;
+    width: 300px;
+    box-sizing: content-box;
+    margin: 10px 10px;
+    padding: 10px 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+.list-categories{
+    list-style: none;
+    
+    background: red;
+    text-decoration: none;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
+}
+
+.category{
+    min-width: 200px;
+    width: 200px;
+    font-size: 20px;
+    background: blueviolet;
+    margin: 5px auto;
+    
+}
