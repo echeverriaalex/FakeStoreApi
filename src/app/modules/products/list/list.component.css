@@ -28,7 +28,7 @@ body{
     background: #FFFFFF;
     border-radius: 15px;
     max-width: 60vw;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px 20px;
     
     
@@ -37,6 +37,7 @@ body{
     flex-wrap: wrap;    
     justify-content: center;
     align-items: center;
+
 
     /* float: right; */
 }
@@ -113,19 +114,6 @@ a{
     /*border: 2px solid violet;*/
     margin: 20px 10px;
 }
-
-/*
-.list-products img {
-    
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    
-}
-*/
-
 
 .img-product{
     /*
