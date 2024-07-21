@@ -3,13 +3,13 @@
 <button type="button" (click)="changeType()" >Mostrar pass</button> 
 -->
 
+<!--
 <div class="container-categories">
     <app-list-categories> </app-list-categories>
 </div>
-
-
+-->
     
-
+<div class="container-list-products">
     <div class="list-products">
         <a *ngFor="let product of productsList" [routerLink]="['/products/product/' + product.id]"> 
             <div class="container-product"  (click)="viewProduct(product.id)">           
@@ -35,3 +35,4 @@
             </div>
         </a>
     </div>
+</div>
