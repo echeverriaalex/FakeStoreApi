@@ -1,18 +1,15 @@
-
-<div class="main">
-    <div class="head">
+<header>
+    <nav>
         <img class="logo" src="https://media.istockphoto.com/id/1204513100/vector/shopping-cart-logo.jpg?s=612x612&w=0&k=20&c=8ucmOvXsQPtfFcExcpQMz2i6HsEXvBh0N9ZUz1_0eDk=">
         <h2> Virtual-Shopping </h2>
-    </div>
-    
-
-    <ul>
-        <li> <a [routerLink]="['/products/list']">Products</a></li>
-        <li> <a href="" [routerLink]="['']">Start</a></li>
-        <li> <a href="">My cart</a></li>
-        <li> <a href="">Categories</a></li>
-        <li> <a href="">LogIn</a></li>
-        <li> <a href="">LogOut</a></li>
-        <li> <a href="">Register</a></li>
-    </ul>
-</div>
+        <ul class="menu-toggle">
+            <li> <a [routerLink]="['/products/list']">Products</a> </li>
+            <li> <a href="" [routerLink]="['']">Start</a> </li>
+            <li> <a href="">My cart</a> </li>
+            <li> <a href="">Categories</a> </li>
+            <li> <a href="">LogIn</a> </li>
+            <li> <a href="">LogOut</a> </li>
+            <li> <a href="" [routerLink]="['/resgister']">Register</a> </li>
+        </ul>
+    </nav>
+</header>

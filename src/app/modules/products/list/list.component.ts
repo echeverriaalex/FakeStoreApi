@@ -42,7 +42,6 @@ export class ListComponent implements OnInit{
   listProducts(){
     this.productService.getProductsList()
       .then((list) => {
-        //console.log(list);        
         this.productsList = list
       })
       .catch((err)=>{
